@@ -5,7 +5,7 @@ data = open("202201i.txt","r").read()
 
 dreins = data.split("\n\n")
 
-max = 0
+max = []
 
 print(len(dreins))
 
@@ -16,9 +16,13 @@ for i in dreins:
     cals = 0
     for j in ncs:
         cals += int(j)
-    if cals>max:
-        max = cals
+    max.append(cals)
     c+=1
 
+max = sorted(max)
+
+print(max[-3:])
+
+print(sum(max[-3:]))
+
 print(c)
-print(max)
