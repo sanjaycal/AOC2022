@@ -24,7 +24,6 @@ for i in data:
             for j in curdir:
                 st = st + "/" + j
             curdir.append(st + "/" + i)
-        #print(curdir)
     if i[0] == "l":
         files = i.split("\n")[1:]
         sumSize = 0
